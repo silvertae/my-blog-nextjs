@@ -1,13 +1,13 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Tech Blog by Fuse',
-  author: 'Fuse',
-  headerTitle: 'FuseBox',
+  title: 'euntae kim blog',
+  author: 'euntae kim',
+  headerTitle: '',
   description: '학습한 내용들과 개발하면서 겪은 이슈들을 기록하는 블로그입니다.',
   language: 'ko-KR',
   theme: 'system', // system, dark or light
   siteUrl: 'https://silvertae-blog.vercel.app/',
-  siteRepo: 'https://github.com/silvertae/my-blog-nextjs',
+  siteRepo: 'https://github.com/silvertae/silvertae-blog',
   siteLogo: '/static/images/peep.png',
   socialBanner: '/static/images/twitter-card.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',

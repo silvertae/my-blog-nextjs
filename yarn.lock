@@ -2355,6 +2355,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/font@npm:^14.0.1":
+  version: 14.0.1
+  resolution: "@next/font@npm:14.0.1"
+  checksum: c27634c81f7306c66f6508f2bf5e8024ba19674859dd81c725b737d8630f152e547c87249246507f1fb62c6d8c135587bbda13bb2faa6049d5da6321516b0466
+  languageName: node
+  linkType: hard
+
 "@next/swc-darwin-arm64@npm:13.5.6":
   version: 13.5.6
   resolution: "@next/swc-darwin-arm64@npm:13.5.6"
@@ -11043,6 +11050,7 @@ __metadata:
   resolution: "tailwind-nextjs-starter-blog@workspace:."
   dependencies:
     "@next/bundle-analyzer": 13.5.6
+    "@next/font": ^14.0.1
     "@svgr/webpack": ^8.0.1
     "@tailwindcss/forms": ^0.5.4
     "@tailwindcss/typography": ^0.5.9
