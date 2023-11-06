@@ -1,8 +1,8 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Tech Blog by Fuse',
-  author: 'Fuse',
-  headerTitle: 'FuseBox',
+  title: 'euntae kim blog',
+  author: 'euntae kim',
+  headerTitle: '',
   description: '학습한 내용들과 개발하면서 겪은 이슈들을 기록하는 블로그입니다.',
   language: 'ko-KR',
   theme: 'system', // system, dark or light
