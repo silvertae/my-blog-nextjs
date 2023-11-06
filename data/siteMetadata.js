@@ -3,10 +3,10 @@ const siteMetadata = {
   title: 'Tech Blog by Fuse',
   author: 'Fuse',
   headerTitle: 'FuseBox',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: '학습한 내용들과 개발하면서 겪은 이슈들을 기록하는 블로그입니다.',
   language: 'ko-KR',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+  siteUrl: 'https://silvertae-blog.vercel.app/',
   siteRepo: 'https://github.com/silvertae/my-blog-nextjs',
   siteLogo: '/static/images/peep.png',
   socialBanner: '/static/images/twitter-card.png',
@@ -37,11 +37,11 @@ const siteMetadata = {
     //   googleAnalyticsId: '', // e.g. G-XXXXXXX
     // },
   },
-  newsletter: {
-    // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
-    // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
-  },
+  // newsletter: {
+  // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
+  // Please add your .env file and modify it according to your selection
+  // provider: 'buttondown',
+  // },
   comments: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
