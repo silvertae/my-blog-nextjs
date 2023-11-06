@@ -7,7 +7,7 @@ const siteMetadata = {
   language: 'ko-KR',
   theme: 'system', // system, dark or light
   siteUrl: 'https://silvertae-blog.vercel.app/',
-  siteRepo: 'https://github.com/silvertae/my-blog-nextjs',
+  siteRepo: 'https://github.com/silvertae/silvertae-blog',
   siteLogo: '/static/images/peep.png',
   socialBanner: '/static/images/twitter-card.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',

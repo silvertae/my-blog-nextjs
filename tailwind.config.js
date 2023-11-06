@@ -25,7 +25,7 @@ module.exports = {
         sans: ['var(--font-pretendard)', ...fontFamily.serif],
       },
       colors: {
-        primary: colors.pink,
+        primary: colors.sky,
         gray: colors.gray,
       },
       typography: ({ theme }) => ({
