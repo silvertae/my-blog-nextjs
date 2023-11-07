@@ -12,8 +12,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
 const pretendard = localFont({
-  src: '../public/fonts/PretendardVariable.woff2',
-  display: 'swap',
+  src: '../public/static/fonts/PretendardVariable.woff2',
   variable: '--font-pretendard',
 })
 
