@@ -1,7 +1,7 @@
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
