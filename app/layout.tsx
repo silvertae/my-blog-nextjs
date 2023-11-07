@@ -14,8 +14,7 @@ import { Metadata } from 'next'
 const pretendard = localFont({
   src: '../public/static/fonts/PretendardVariable.woff2',
   variable: '--font-pretendard',
-  display: 'swap',
-  preload: true,
+  adjustFontFallback: false,
 })
 
 export const metadata: Metadata = {
