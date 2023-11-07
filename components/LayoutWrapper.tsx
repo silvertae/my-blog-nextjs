@@ -11,6 +11,8 @@ interface Props {
 const pretendard = localFont({
   src: '../public/static/fonts/PretendardVariable.woff2',
   variable: '--font-pretendard',
+  display: 'swap',
+  preload: true,
 })
 
 const LayoutWrapper = ({ children }: Props) => {
