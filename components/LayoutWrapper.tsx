@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import { ReactNode } from 'react'
@@ -8,14 +8,37 @@ interface Props {
   children: ReactNode
 }
 
-const inter = Inter({
-  subsets: ['latin'],
+const pretendard = localFont({
+  src: [
+    {
+      path: '../public/static/fonts/Pretendard-Regular.subset.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Pretendard-Medium.subset.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Pretendard-Bold.subset.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Pretendard-ExtraBold.subset.woff2',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-pretendard',
+  adjustFontFallback: false,
 })
 
 const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
-      <div className={`${inter.className} flex h-screen flex-col justify-between font-sans`}>
+      <div className={`${pretendard.className} flex h-screen flex-col justify-between font-sans`}>
         <Header />
         <main className="mb-auto">{children}</main>
         <Footer />

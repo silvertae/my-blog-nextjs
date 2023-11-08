@@ -1,7 +1,7 @@
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -12,9 +12,30 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
 const pretendard = localFont({
-  src: '../public/fonts/PretendardVariable.woff2',
-  display: 'swap',
+  src: [
+    {
+      path: '../public/static/fonts/Pretendard-Regular.subset.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Pretendard-Medium.subset.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Pretendard-Bold.subset.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Pretendard-ExtraBold.subset.woff2',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
   variable: '--font-pretendard',
+  adjustFontFallback: false,
 })
 
 export const metadata: Metadata = {

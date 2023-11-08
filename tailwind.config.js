@@ -22,7 +22,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-pretendard)', ...fontFamily.serif],
+        sans: ['var(--font-pretendard)', ...fontFamily.sans],
       },
       colors: {
         primary: colors.sky,
@@ -43,7 +43,7 @@ module.exports = {
               letterSpacing: theme('letterSpacing.tight'),
             },
             h3: {
-              fontWeight: '600',
+              fontWeight: '500',
             },
             code: {
               color: theme('colors.indigo.500'),
