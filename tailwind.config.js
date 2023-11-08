@@ -43,7 +43,7 @@ module.exports = {
               letterSpacing: theme('letterSpacing.tight'),
             },
             h3: {
-              fontWeight: '600',
+              fontWeight: '500',
             },
             code: {
               color: theme('colors.indigo.500'),

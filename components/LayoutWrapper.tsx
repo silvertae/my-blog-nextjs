@@ -9,7 +9,28 @@ interface Props {
 }
 
 const pretendard = localFont({
-  src: '../public/static/fonts/PretendardVariable.woff2',
+  src: [
+    {
+      path: '../public/static/fonts/Pretendard-Regular.subset.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Pretendard-Medium.subset.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Pretendard-Bold.subset.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Pretendard-ExtraBold.subset.woff2',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
   variable: '--font-pretendard',
   adjustFontFallback: false,
 })
