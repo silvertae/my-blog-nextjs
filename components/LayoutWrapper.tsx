@@ -32,7 +32,6 @@ const pretendard = localFont({
     },
   ],
   variable: '--font-pretendard',
-  adjustFontFallback: false,
 })
 
 const LayoutWrapper = ({ children }: Props) => {

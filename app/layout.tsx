@@ -35,7 +35,6 @@ const pretendard = localFont({
     },
   ],
   variable: '--font-pretendard',
-  adjustFontFallback: false,
 })
 
 export const metadata: Metadata = {
