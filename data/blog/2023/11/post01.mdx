@@ -1,0 +1,85 @@
+---
+title: '웹폰트 로딩시 출렁이는 현상 해결하기 (feat. 웹폰트 지연시간 줄이기)'
+date: '2023-11-06'
+tags: ['Font Optimization', 'FOUT', 'Nextjs']
+draft: false
+summary: '블로그를 만들면서 처음 페이지 로드시 폰트가 출렁이는 현상을 발견했다. 이를 fallback font를 설정을 변경하고 웹폰트 파일 용량을 줄임으로써 개선하였다.'
+---
+
+## 목차
+
+- [Intro](#Intro)
+- [폰트 파일 용량 줄이기](#폰트-파일-용량-줄이기)
+- [그 외 폰트 관련 속성들](#폰트-관련-속성)
+- [결론](#결론)
+- [참고자료](#참고한-자료)
+
+## Intro
+
+![before](/static/gifs/font-error-before.gif)
+
+위를 보면 주소창에 블로그 url을 입력해서 처음 페이지가 렌더링 될 때 폰트가 변하면서 출렁이는게 보일것이다.
+왜 이런 현상이 발생하는 것일까?
+
+### 어떤 문제가 있었는가?
+
+나만의 블로그를 만들고 나서 몇가지 수정을 하면서 기존에 템플릿에 설정된 폰트가 마음에 안들어서 좀 더 깔끔한 폰트로 바꾸고 싶었다.
+블로그를 만들때 Next.js와 tailwind를 사용한 [블로그 템플릿](https://github.com/timlrx/tailwind-nextjs-starter-blog)을 사용했는데 폰트 설정이 어떻게 되어있나 찾아보니 다음과 같이 되어있었다.
+
+```tsx
+// app/layout.tsx
+import { Space_Grotesk } from 'next/font/google'
+
+const space_grotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
+})
+```
+
+Next.js 공식문서를 찾아보니 next/font 라는 자체적인 Font Module을 가지고 있었다.
+원래는 `@next/font` 라는 패키지를 따로 설치해야 사용이 가능했는데, Next.js 13.2 버전 이후로 기본적으로 제공하는 Built-in next/font를 이용해서 [Font Optimization](https://nextjs.org/docs/app/building-your-application/optimizing/fonts#local-fonts)을 제공하고 있었다.
+
+나는 Google Font를 사용하는게 아닌 [Pretendard](https://github.com/orioncactus/pretendard) 폰트를 사용하고 싶었기 때문에
+`public/static/fonts` 폴더에 미리 다운받은 `PretendardVariable.woff2` 넣어두고 next/font에서 제공하는 localFont 설정으로 변경후 다시 빌드해서 배포하였다.
+
+```tsx
+// app/layout.tsx
+import localFont from 'next/font/local'
+
+const pretendard = localFont({
+  src: '../public/static/fonts/PretendardVariable.woff2',
+  display: 'swap',
+  variable: '--font-pretendard',
+})
+```
+
+그리고 새롭게 배포된 블로그를 확인해보는데 이전에 없었던 위와 같이 폰트가 출렁이는 것처럼 보이는 이상한 현상을 발견했다.
+일단 당시 생각으로는 Pretendard 폰트를 불러 올때까지
+
+## 폰트 파일 용량 줄이기
+
+![before](/static/images/before-subset.png)
+
+![before](/static/images/after-subset.png)
+
+## 폰트 관련 속성
+
+### `font-display`
+
+### `preload`
+
+## 결론
+
+- 불필요한 Glyph를 줄인 subset 폰트를 사용하면 폰트 로딩 시간을 줄여 사용자 경험을 향상시킬 수 있다.
+- preload 속성을 활용하자
+
+## 참고한 자료
+
+---
+
+[How @next/font works](https://blog.mathpresso.com/how-next-font-works-8bb72c2bae39)
+
+[지연 시간 없이 웹폰트 서빙하기 - Feat. Safari & Edge functions | 뱅크샐러드](https://blog.banksalad.com/tech/font-preload-on-safari/)
+
+[A New Way To Reduce Font Loading Impact: CSS Font Descriptors — Smashing Magazine](https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/)w
