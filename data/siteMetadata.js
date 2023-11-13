@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'euntae kim blog',
-  author: 'euntae kim',
+  title: 'silvertae blog',
+  author: 'silvertae',
   headerTitle: '',
   description: '학습한 내용들과 개발하면서 겪은 이슈들을 기록하는 블로그입니다.',
   language: 'ko-KR',
@@ -10,37 +10,14 @@ const siteMetadata = {
   siteRepo: 'https://github.com/silvertae/silvertae-blog',
   siteLogo: '/static/images/peep.png',
   socialBanner: '/static/images/twitter-card.png',
-  // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'massenger7@gmail.com',
   github: 'https://github.com/silvertae',
-  // twitter: 'https://twitter.com/Twitter',
-  // facebook: 'https://facebook.com',
-  // youtube: 'https://youtube.com',
   // linkedin: 'https://www.linkedin.com',
   locale: 'ko-KR',
   analytics: {
-    // If you want to use an analytics provider you have to add it to the
-    // content security policy in the `next.config.js` file.
-    // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
-    // umamiAnalytics: {
-    // We use an env variable for this site to avoid other users cloning our analytics ID
-    // umamiWebsiteId: process.env.NEXT_UMAMI_ID, // e.g. 123e4567-e89b-12d3-a456-426614174000
-    // },
-    // plausibleAnalytics: {
-    //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-    // },
-    // simpleAnalytics: {},
-    // posthogAnalytics: {
-    //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    // },
-    // googleAnalytics: {
-    //   googleAnalyticsId: '', // e.g. G-XXXXXXX
-    // },
-  },
-  newsletter: {
-    // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
-    // Please add your .env file and modify it according to your selection
-    // provider: 'buttondown',
+    googleAnalytics: {
+      googleAnalyticsId: 'G-Q436VZFBFZ',
+    },
   },
   comments: {
     // If you want to use an analytics provider you have to add it to the
